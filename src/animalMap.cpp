@@ -144,6 +144,51 @@ void animalMap::inputStatusOfBull(string FileWithStatusOfBull){
   cout<<"\ninputStatusOfBull(): Reading file "<<FileWithStatusOfBull<<endl;
   cout<<"*****************************************************************"<< endl;
 
+  std::string sep(";");
+  std::string subStr;
+  Tokenizer colData;
+  string inputStr;
+  int rec=0, numCol;
+  unsigned statusOfBullConflict=0;
+  unsigned statusOfBull=0;
+  while (getline(datafile,inputStr)){
+    // remove Mac carriage return from argument...
+    size_t foundloc = inputStr.find('\r');
+    if ( foundloc != string::npos ) {
+      subStr = inputStr.substr(0,foundloc);
+      inputStr = subStr;
+    }
+    colData.getTokens(inputStr,sep);
+    if(rec==0){
+      numCol = colData.size();
+    }
+
+    simpleDebug("inputStatusOfBull()_Input Line inputStr " + inputStr, "");
+
+    string indstr  = colData[2];
+    string statusofbullstr  = colData[13];
+
+    map<string,animal*>::iterator ait = this->find(indstr);
+    animal *aPtr = ait->second;
+    if(ait != this->end()){
+      //If statusOfBullStr in aMap is not the same to FileWithStatusOfBull
+      if(aPtr->statusOfBullStr != statusofbullstr){
+        statusOfBullConflict++;
+        //If statusOfBullStr is missing, the statusofbullstr coming from FileWithStatusOfBull is set
+        if(aPtr->statusOfBullStr == "00"){
+          simpleDebug("inputStatusOfBull()_statusOfBullStr is missing, so setting statusofbullstr coming from FileWithStatusOfBull: " + statusofbullstr, indstr);
+          aPtr->statusOfBullStr = statusofbullstr;
+          statusOfBull++;
+        }
+      }
+    }
+  }
+
+  cout<<"Number of records stored in aMap = "<<this->size()<<endl;
+  if(statusOfBullConflict){
+    cout<<statusOfBullConflict<<" had different status of bull."<<endl;
+    cout<<"among those "<<statusOfBull<<" are updated via FileWithStatusOfBull for the missing status of bull in aMap."<<endl;
+  }
 
 }
 
