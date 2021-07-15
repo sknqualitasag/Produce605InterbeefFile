@@ -41,7 +41,7 @@ void sireMap::mergeAllInputs(animalMap &aMap, animalMap &pMap){
       string psRunningMode = getRunningMode();
 
       // new sire record
-      sire *sPtr = new sire(itTVD->second->indStr, itTVD->second->traitStr, itTVD->second->accDbl, pit->second->indBreedStr, pit->second->birthdate, pit->second->itbidStr, pit->second->sexBirthStr, pit->second->inditbbreedStr, pit->second->indDbIdStr, pit->second->damDbIdStr, pit->second->sireDbIdStr, psRunningMode, itTVD->second->statusOfBullStr);
+      sire *sPtr = new sire(itTVD->second->indStr, itTVD->second->traitStr, itTVD->second->accDbl, pit->second->indBreedStr, pit->second->birthdate, pit->second->itbidStr, pit->second->sexBirthStr, pit->second->inditbbreedStr, pit->second->indDbIdStr, pit->second->damDbIdStr, pit->second->sireDbIdStr, psRunningMode);
 
       (*this)[pit->second->indDbIdStr] = sPtr;
       simpleDebug("mergeAllInputs()_Input Line pit->second->indDbIdStr " + pit->second->indDbIdStr, pit->second->indDbIdStr);
