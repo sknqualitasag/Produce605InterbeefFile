@@ -39,6 +39,7 @@ int Produce605InterbeefFile_main(std::string paramFileName) {
   parmMap.inputParms();
 
   std::string dataFile  							        = parmMap.getString("dataFileName");
+  std::string FileWithStatusOfBull            = parmMap.getString("FileNameWithStatusOfBull");
   std::string bloodFile							          = parmMap.getString("bloodFileName");
   std::string bloodFileReformattted	          = bloodFile+".reformatted";
   std::string pedigreeFile							      = parmMap.getString("pedigreeFileName");
