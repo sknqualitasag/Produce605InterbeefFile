@@ -40,8 +40,6 @@ void sireMap::mergeAllInputs(animalMap &aMap, animalMap &pMap){
 
       string psRunningMode = getRunningMode();
 
-      cout<<"indStr: "<<itTVD->second->indStr<<" "<<"statusOfBullStr: "<<itTVD->second->statusOfBullStr<<endl;
-
       // new sire record
       sire *sPtr = new sire(itTVD->second->indStr, itTVD->second->traitStr, itTVD->second->accDbl, pit->second->indBreedStr, pit->second->birthdate, pit->second->itbidStr, pit->second->sexBirthStr, pit->second->inditbbreedStr, pit->second->indDbIdStr, pit->second->damDbIdStr, pit->second->sireDbIdStr, psRunningMode);
 
