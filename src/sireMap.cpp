@@ -79,7 +79,7 @@ void sireMap::outputInterbeef605(string psBreed, string parInterbeefTraitName){
                     <<setw(4)<<sPtr->inditbbreedStr
                     <<setw(16)<<sPtr->itbidStr.substr(2,16)
                     <<setw(3)<<sPtr->accDbl*100
-                    <<setw(3)<<"00"
+                    <<setw(3)<<sPtr->statusOfBullStr
                     <<setw(4)<<"CHE"<<endl;
 
       }
