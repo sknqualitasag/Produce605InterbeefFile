@@ -165,8 +165,6 @@ void animalMap::inputStatusOfBull(string FileWithStatusOfBull){
 
     simpleDebug("inputStatusOfBull()_Input Line inputStr " + inputStr, "");
 
-//    string indstr  = colData[2];
-//    string statusofbullstr  = colData[13];
     string indstr  = colData[0];
     string statusofbullstr  = colData[1];
 
@@ -174,9 +172,6 @@ void animalMap::inputStatusOfBull(string FileWithStatusOfBull){
     map<string,animal*>::iterator ait = this->find(indstr);
     animal *aPtr = ait->second;
     if(ait != this->end()){
-
-      cout<<"indStr "<<aPtr->indStr<<" Before statusOfBullStr "<<aPtr->statusOfBullStr<<" After statusofbullstr "<<statusofbullstr<<endl;
-
       //If statusOfBullStr in aMap is not the same to FileWithStatusOfBull
       if(aPtr->statusOfBullStr != statusofbullstr){
         statusOfBullConflict++;
