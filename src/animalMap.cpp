@@ -132,6 +132,22 @@ void animalMap::inputData(string dataFile){
 }
 
 
+void animalMap::inputStatusOfBull(string FileWithStatusOfBull){
+
+  ifstream datafile(FileWithStatusOfBull.c_str());
+
+  if(!datafile){
+    cout<< "inputData(): Cannot open file "<<FileWithStatusOfBull<<endl;
+    exit(8);
+  }
+
+  cout<<"\ninputStatusOfBull(): Reading file "<<FileWithStatusOfBull<<endl;
+  cout<<"*****************************************************************"<< endl;
+
+
+}
+
+
 //' Make readable RRTDM-Pedigree from file pedfile
 void animalMap::makeReadableRRTDMPedigree(string ipedfile, string opedfile){
 

@@ -63,6 +63,7 @@ int Produce605InterbeefFile_main(std::string paramFileName) {
   //Read data file
 //  aMap.setRunningMode(CONSTANTS::RUNNING_DEBUGALL);
   aMap.inputData(dataFile);
+  aMap.inputStatusOfBull(FileWithStatusOfBull);
 
   //Read pedigree file
 //  pMap.setRunningMode(CONSTANTS::RUNNING_DEBUGALL);

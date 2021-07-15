@@ -36,6 +36,7 @@ public:
   string getSexWithITBid(string itbidstr);
 
   void inputData(string dataFile);
+  void inputStatusOfBull(string FileWithStatusOfBull);
 
 
 
