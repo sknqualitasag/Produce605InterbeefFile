@@ -11,7 +11,7 @@ using namespace std;
 class sire{
 public:
 
-  string indStr, traitStr, indBreedStr, sexBirthStr, itbidStr, inditbbreedStr, indDbIdStr, damDbIdStr, sireDbIdStr;
+  string indStr, traitStr, indBreedStr, sexBirthStr, itbidStr, inditbbreedStr, indDbIdStr, damDbIdStr, sireDbIdStr, statusOfBullStr;
   double accDbl;
   date birthdate;
 

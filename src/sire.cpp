@@ -25,7 +25,7 @@
 using namespace std;
 
 
-sire::sire(string indstr, string traitname, double acc, string indbreedstr, date indbirthdate, string itbidstr, string sexstr, string inditbbreedstr, string indDbIdstr, string damDbIdstr, string sireDbIdstr, string psRunningMode){
+sire::sire(string indstr, string traitname, double acc, string indbreedstr, date indbirthdate, string itbidstr, string sexstr, string inditbbreedstr, string indDbIdstr, string damDbIdstr, string sireDbIdstr, string psRunningMode, string statusOfBullstr){
 
   indStr = indstr;
   constructorDebug("constructor sire()_Constructor called with indStr ", indStr, psRunningMode);
@@ -49,6 +49,8 @@ sire::sire(string indstr, string traitname, double acc, string indbreedstr, date
   constructorDebug("constructor sire()_Constructor called with damDbIdStr "+damDbIdStr, indStr, psRunningMode);
   sireDbIdStr = sireDbIdstr;
   constructorDebug("constructor sire()_Constructor called with sireDbIdStr "+sireDbIdStr, indStr, psRunningMode);
+  statusOfBullStr = statusOfBullstr;
+  constructorDebug("constructor sire()_Constructor called with statusOfBullStr "+statusOfBullStr, indStr, psRunningMode);
 
 
 }
