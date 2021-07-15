@@ -10,5 +10,5 @@ SystemRequirements: C++11
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-Imports: Rcpp (>= 1.0.6)
+Imports: Rcpp (>= 1.0.5)
 LinkingTo: Rcpp
