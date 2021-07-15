@@ -23,7 +23,7 @@
 
 using namespace std;
 
-animal::animal(string indstr, string traitname, double acc, string psRunningMode){
+animal::animal(string indstr, string traitname, double acc, string psRunningMode, string statusOfBullstr){
 
   indStr = indstr;
   constructorDebug("constructor animal()_Constructor called with indStr ", indStr, psRunningMode);
@@ -31,6 +31,8 @@ animal::animal(string indstr, string traitname, double acc, string psRunningMode
   constructorDebug("constructor animal()_Constructor called with traitStr "+traitStr, indStr, psRunningMode);
   accDbl = acc;
   constructorDebug("constructor animal()_Constructor called with accDbl "+to_string(accDbl), indStr, psRunningMode);
+  statusOfBullStr = statusOfBullstr;
+  constructorDebug("constructor animal()_Constructor called with statusOfBullStr "+statusOfBullStr, indStr, psRunningMode);
 
 }
 

@@ -109,7 +109,7 @@ void animalMap::inputData(string dataFile){
 
         string psRunningMode = getRunningMode();
 
-        animal *aPtr = new animal(indstr, traitname, acc, psRunningMode); //Sophie
+        animal *aPtr = new animal(indstr, traitname, acc, psRunningMode, "00"); //Sophie
 
         if(rec%100000==0){
           cout<<rec<<" records processed \r";
