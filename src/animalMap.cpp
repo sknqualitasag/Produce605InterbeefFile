@@ -94,7 +94,7 @@ void animalMap::inputData(string dataFile){
       string indstr  = colData[0];
       string traitname = colData[1];
       int numDescendants  = atoi(colData[2].c_str());
-      int numObs  = atoi(colData[3].c_str());
+      int numHerds  = atoi(colData[3].c_str());
       double sol  = atof(colData[4].c_str());
       double acc = atof(colData[5].c_str());
       string type  = colData[6];
